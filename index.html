@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Pizza Shop</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Tasting Event Registration</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#order">Order Online</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h1>Welcome to Local Pizza Shop</h1>
-            <p>Experience the taste of authentic Italian pizzas!</p>
-            <div class="menu-options">
-                <h2>Today's Specials</h2>
-                <div class="pizza-option">
-                    <h3>Pepperoni Pizza</h3>
-                    <p>Classic pepperoni pizza topped with mozzarella cheese and pepperoni slices.</p>
-                    <button class="add-to-cart-btn" data-name="Pepperoni Pizza" data-price="10">Add to Cart - $10</button>
-                </div>
-                <div class="pizza-option">
-                    <h3>Margherita Pizza</h3>
-                    <p>Simple yet delicious pizza topped with tomato sauce, fresh mozzarella, and basil.</p>
-                    <button class="add-to-cart-btn" data-name="Margherita Pizza" data-price="8">Add to Cart - $8</button>
-                </div>
-                <!-- Add more pizza options here -->
-            </div>
-        </section>
-        <section id="menu">
-            <!-- Menu content -->
-        </section>
-        <section id="order">
-            <!-- Order online content -->
-        </section>
-        <section id="contact">
-            <!-- Contact form -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Local Pizza Shop. All rights reserved.</p>
-        <form id="contact-form">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </footer>
-    <script src="script.js"></script>
+  <h1>Welcome to our Pizza Tasting Event!</h1>
+  <p>We're excited to have you join us. Please fill out the form below to register:</p>
+  <form id="registrationForm" action="#" method="post" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+    </div>
+    <div class="form-group">
+      <label for="guests">Number of Guests (including yourself):</label>
+      <select id="guests" name="guests" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Dietary Restrictions (if any):</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="vegetarian" name="diet" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label>
+        <input type="checkbox" id="vegan" name="diet" value="Vegan">
+        <label for="vegan">Vegan</label>
+        <input type="checkbox" id="glutenFree" name="diet" value="Gluten-free">
+        <label for="glutenFree">Gluten-free</label>
+        <input type="checkbox" id="none" name="diet" value="None">
+        <label for="none">None</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="specialRequests">Special Requests:</label>
+      <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+    </div>
+    <button type="submit">Register Now!</button>
+  </form>
+  <script src="script.js"></script>
 </body>
 </html>
