@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Tasting Event Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 400px;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 100px;
+    }
+    label {
+      font-weight: bold;
+    }
+    .checkboxes {
+      margin-bottom: 10px;
+    }
+    .checkboxes label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pizza Tasting Event Registration</h1>
+  </header>
+  <form id="registrationForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="guests">Number of Guests (including yourself):</label>
+    <select id="guests" name="guests" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <div class="checkboxes">
+      <label>Dietary Restrictions (if any):</label>
+      <input type="checkbox" id="vegetarian" name="dietaryRestrictions" value="vegetarian">
+      <label for="vegetarian">Vegetarian</label><br>
+      
+      <input type="checkbox" id="vegan" name="dietaryRestrictions" value="vegan">
+      <label for="vegan">Vegan</label><br>
+      
+      <input type="checkbox" id="glutenFree" name="dietaryRestrictions" value="glutenFree">
+      <label for="glutenFree">Gluten-free</label><br>
+      
+      <input type="checkbox" id="none" name="dietaryRestrictions" value="none">
+      <label for="none">None</label>
+    </div>
+
+    <label for="specialRequests">Special Requests:</label>
+    <textarea id="specialRequests" name="specialRequests"></textarea>
+
+    <button type="submit">Register Now!</button>
+  </form>
+  <footer>
+    &copy; 2024 Pizza Tasting Event. All rights reserved.
+  </footer>
+</body>
+</html>
