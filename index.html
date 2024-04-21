@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Tasting Event Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome to our Pizza Tasting Event!</h1>
+  <p>We're excited to have you join us. Please fill out the form below to register:</p>
+  <form id="registrationForm" action="#" method="post" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+    </div>
+    <div class="form-group">
+      <label for="guests">Number of Guests (including yourself):</label>
+      <select id="guests" name="guests" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Dietary Restrictions (if any):</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="vegetarian" name="diet" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label>
+        <input type="checkbox" id="vegan" name="diet" value="Vegan">
+        <label for="vegan">Vegan</label>
+        <input type="checkbox" id="glutenFree" name="diet" value="Gluten-free">
+        <label for="glutenFree">Gluten-free</label>
+        <input type="checkbox" id="none" name="diet" value="None">
+        <label for="none">None</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="specialRequests">Special Requests:</label>
+      <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+    </div>
+    <button type="submit">Register Now!</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
